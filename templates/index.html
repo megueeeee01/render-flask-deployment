@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Simple Flask App</h1>
+    <form method="post">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if name %}
+        <p>Hello, {{ name }}!</p>
+    {% endif %}
+</body>
+</html>
